@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>迪思传媒-公司介绍</title>
+    <title>悦动传媒-公司介绍</title>
     <meta name="description" content="中国领先的全链路营销服务机构">
     <link rel="icon" href="https://ext.same-assets.com/3058181751/895042499.ico">
     <style>
@@ -13,12 +13,18 @@
             box-sizing: border-box;
         }
         
+        html {
+            scroll-behavior: smooth;
+        }
+        
         body {
             font-family: Arial, "Microsoft YaHei", sans-serif;
             color: #181e1f;
             background: #fff;
+            overflow-x: hidden;
         }
         
+        /* Header Styles */
         .header {
             position: fixed;
             top: 0;
@@ -30,41 +36,66 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .header.scrolled {
+            padding: 15px 50px;
+            background: rgba(255,255,255,0.98);
         }
         
         .logo {
             width: 80px;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.1);
         }
         
         .menu-icon {
             width: 50px;
             cursor: pointer;
+            transition: transform 0.3s ease;
         }
         
+        .menu-icon:hover {
+            transform: rotate(90deg);
+        }
+        
+        /* Hero Section */
         .hero-section {
             padding-top: 100px;
             min-height: 100vh;
             background: url('https://ext.same-assets.com/3058181751/1708708290.jpeg') no-repeat center;
             background-size: cover;
+            background-attachment: fixed;
             display: flex;
             align-items: center;
+            position: relative;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255,255,255,0.1);
         }
         
         .content-wrapper {
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 50px;
-            display: flex;
-            gap: 100px;
-        }
-        
-        .left-menu {
-            width: 150px;
-            flex-shrink: 0;
+            position: relative;
+            z-index: 1;
         }
         
         .main-content {
-            flex: 1;
+            animation: fadeInUp 1s ease;
         }
         
         .company-title {
@@ -75,6 +106,7 @@
             border-bottom: 4px solid #000;
             padding-bottom: 15px;
             display: inline-block;
+            animation: slideInLeft 0.8s ease;
         }
         
         .company-intro {
@@ -82,12 +114,37 @@
             line-height: 2;
             color: #333;
             margin-bottom: 50px;
+            animation: fadeIn 1.2s ease;
         }
         
+        .company-intro p {
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        .company-intro p:nth-child(1) { animation-delay: 0.2s; }
+        .company-intro p:nth-child(2) { animation-delay: 0.4s; }
+        .company-intro p:nth-child(3) { animation-delay: 0.6s; }
+        .company-intro p:nth-child(4) { animation-delay: 0.8s; }
+        
+        /* Stats Section */
         .stats-section {
             background: linear-gradient(135deg, #0a8fce 0%, #0070b0 100%);
             padding: 80px 50px;
             color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: moveBackground 20s linear infinite;
         }
         
         .stats-grid {
@@ -96,49 +153,79 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 60px;
+            position: relative;
+            z-index: 1;
         }
         
         .stat-item {
             text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease;
+        }
+        
+        .stat-item.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
         
         .stat-label {
             font-size: 24px;
             margin-bottom: 20px;
+            opacity: 0.9;
         }
         
         .stat-number {
             font-size: 72px;
             font-weight: bold;
+            font-family: 'Arial', sans-serif;
         }
         
+        .counter {
+            display: inline-block;
+        }
+        
+        /* Clients Section */
         .clients-section {
             padding: 80px 50px;
             background: #f4f4f5;
+            overflow: hidden;
         }
         
-        .clients-grid {
-            max-width: 1200px;
+        .clients-slider {
+            max-width: 1400px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .clients-track {
+            display: flex;
             gap: 40px;
-            align-items: center;
+            animation: scroll 30s linear infinite;
+        }
+        
+        .clients-track:hover {
+            animation-play-state: paused;
         }
         
         .client-logo {
-            width: 100%;
-            height: auto;
+            width: 180px;
+            height: 80px;
+            object-fit: contain;
             filter: grayscale(100%);
             opacity: 0.6;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
         }
         
         .client-logo:hover {
             filter: grayscale(0%);
             opacity: 1;
+            transform: scale(1.1);
         }
         
+        /* Timeline Section */
         .timeline-section {
             padding: 80px 50px;
             background: white;
@@ -151,6 +238,14 @@
             border-bottom: 4px solid #000;
             padding-bottom: 10px;
             display: inline-block;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.6s ease;
+        }
+        
+        .section-title.visible {
+            opacity: 1;
+            transform: translateX(0);
         }
         
         .timeline-intro {
@@ -164,25 +259,87 @@
             max-width: 1400px;
             margin: 0 auto;
             position: relative;
+            padding-left: 100px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 80px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #0a8fce, #0070b0);
         }
         
         .timeline-item {
             margin-bottom: 100px;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 80px;
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: all 0.8s ease;
+            position: relative;
+        }
+        
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -28px;
+            top: 10px;
+            width: 16px;
+            height: 16px;
+            background: #0a8fce;
+            border: 4px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px #0a8fce;
+            z-index: 1;
         }
         
         .timeline-year {
             font-size: 48px;
             font-weight: bold;
             color: #0a8fce;
+            min-width: 150px;
+            position: relative;
         }
         
         .timeline-content {
             flex: 1;
         }
         
+        .timeline-content h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .timeline-content img {
+            max-width: 400px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .timeline-content img:hover {
+            transform: scale(1.05);
+        }
+        
+        .timeline-slogan {
+            font-size: 24px;
+            color: #0a8fce;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        /* Footer */
         .footer {
             background: #181e1f;
             color: #96a2ac;
@@ -193,11 +350,100 @@
         .footer p {
             margin: 10px 0;
             font-size: 14px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        
+        .footer p:hover {
+            opacity: 1;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-180px * 16 - 40px * 16));
+            }
+        }
+        
+        @keyframes moveBackground {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(50px, 50px);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .company-title {
+                font-size: 32px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .stat-number {
+                font-size: 48px;
+            }
+            
+            .timeline {
+                padding-left: 50px;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .timeline-year {
+                font-size: 32px;
+            }
         }
     </style>
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <img src="https://ext.same-assets.com/3058181751/2014363939.png" alt="D&S Logo" class="logo">
         <img src="https://ext.same-assets.com/3058181751/1535684451.png" alt="Menu" class="menu-icon">
     </header>
@@ -207,15 +453,10 @@
             <div class="main-content">
                 <h1 class="company-title">数字时代的品牌建筑师</h1>
                 <div class="company-intro">
-                    <p>迪思传媒（D&S Media），「数字时代的品牌建筑师」，中国领先的全链路营销服务集团，1996年成立于北京，2001年迁往中国公共关系与营销传播行业先锋前列，2022年位居PRovoke全球公关机构排名第23位。</p>
-                    <br>
-                    <p>迪思坚持专业立身，服千1000余名行业精英分布于北上广、成都、杭州、武汉等地，为汽车、3C、互联网、快消、金融等行业客户提供品牌战略咨询、数字营销、内容管理、网络舆情监测、危机公关、公关代理等全链路的策略、创意及整合传播服务创新型案例，赢得客户信赖和业界口碑。迄今为中华区近公关公司、中国最具影响力传播公司、生硬推荐内容营销公司、数字营销影响力公司等荣誉。迪思营销技术与合作共同成长营销行径品牌打通「内容营销与数据管理平台」，并已完成元宇宙智媒战略布局，以元淑式营销体验加速加客的价值释放。</p>
-                    <br>
-                    <p>迪思拥有高素质、专业化的服务团队，持续建设互动型学习成长体系：通过"迪思营销精英大讲堂"全员体验工鱼跃出场练，年度性专业进修，通过"迪思营销精英训练营"在春化培养中层"破部万慧"，通过"EMBA计划"为管理层提供学习深造契机，培养高层次、复合型人才，迪思因为如此被评选为"中国公共关系与社会发展"。</p>
-                    <br>
-                    <p>迪思十分重视高校学子江界教育，打通行业来束人才的培育通道。迪思高管作为国内知名各校长教授和专业硕士导师，教授专业课程，对研究生做出直接辅导。迪思还作为"中国公共关系学会才实习基地"为学子提供实践机会。</p>
-                    <br>
-                    <p>迪思作为中国广告协会互联网广告委员会常务委员单位、中国商务广告协会内容营销专业委员会理事单位（承担副秘书长工作）、中国国际公共关系协会理事单位、公共关系与全球化传播合作联盟（PRGC）理事企业、中国公共关系协会成员单位、教融协会4A委员会单位，积极推动行业发展，自2016年起牵头中国内容营销趋势论坛（CCMS），先后发布《中国品牌全球化传播研究报告》《超级品牌——一汽国自主车品牌战略传播》以及《2020-2021中国内容营销趋势》白皮书等研究报告，收获业界好评。</p>
+                    <p>悦动传媒（D&S Media），「数字时代的品牌建筑师」，中国领先的全链路营销服务集团，1996年成立于北京，2001年迁往中国公共关系与营销传播行业先锋前列，2022年位居PRovoke全球公关机构排名第23位。</p>
+                    <p>悦动坚持专业立身，旗下1000余名行业精英分布于北上广深、成都、杭州、武汉等地，为汽车、3C、互联网、快消、金融等行业客户提供品牌战略咨询、数字营销、内容管理、网络舆情监测、危机公关等全链路的策略、创意及整合传播服务，赢得客户信赖和业界口碑，迄今为中华区近公关公司、中国最具影响力传播公司、生动推荐内容营销公司、数字营销影响力公司等荣誉。</p>
+                    <p>悦动拥有高素质、专业化的服务团队，持续建设互动型学习成长体系：通过"悦动营销精英大讲堂"全员体验工作跃迁出场练，通过"悦动营销精英训练营"孵化培养中层，通过"EMBA计划"为管理层提供学习深造契机，培养高层次、复合型人才。</p>
+                    <p>悦动作为中国广告协会互联网广告委员会常务委员单位、中国商务广告协会内容营销专业委员会理事单位、中国国际公共关系协会理事单位、公共关系与全球化传播合作联盟（PRGC）理事企业、中国公共关系协会成员单位、教融协会4A委员会单位，积极推动行业发展，自2016年起牵头中国内容营销趋势论坛（CCMS）。</p>
                 </div>
             </div>
         </div>
@@ -223,81 +464,198 @@
 
     <section class="stats-section">
         <div class="stats-grid">
-            <div class="stat-item">
+            <div class="stat-item" data-delay="0">
                 <div class="stat-label">全球分支机构</div>
-                <div class="stat-number">11<sup style="font-size: 36px;">家</sup></div>
+                <div class="stat-number"><span class="counter" data-target="11">0</span><sup style="font-size: 36px;">家</sup></div>
             </div>
-            <div class="stat-item">
+            <div class="stat-item" data-delay="100">
                 <div class="stat-label">员工</div>
-                <div class="stat-number">1500<sup style="font-size: 36px;">+</sup></div>
+                <div class="stat-number"><span class="counter" data-target="1500">0</span><sup style="font-size: 36px;">+</sup></div>
             </div>
-            <div class="stat-item">
+            <div class="stat-item" data-delay="200">
                 <div class="stat-label">服务客户</div>
-                <div class="stat-number">1000<sup style="font-size: 36px;">+</sup></div>
+                <div class="stat-number"><span class="counter" data-target="1000">0</span><sup style="font-size: 36px;">+</sup></div>
             </div>
-            <div class="stat-item">
+            <div class="stat-item" data-delay="300">
                 <div class="stat-label">经典案例</div>
-                <div class="stat-number">800<sup style="font-size: 36px;">+</sup></div>
+                <div class="stat-number"><span class="counter" data-target="800">0</span><sup style="font-size: 36px;">+</sup></div>
             </div>
         </div>
     </section>
 
     <section class="clients-section">
-        <div class="clients-grid">
-            <img src="https://ext.same-assets.com/3058181751/427210201.png" alt="Client" class="client-logo">
-            <img src="https://ext.same-assets.com/3058181751/2615693972.png" alt="Client" class="client-logo">
-            <img src="https://ext.same-assets.com/3058181751/3037674938.png" alt="Client" class="client-logo">
-            <img src="https://ext.same-assets.com/3058181751/849165480.png" alt="Client" class="client-logo">
-            <img src="https://ext.same-assets.com/3058181751/916066270.png" alt="Client" class="client-logo">
-            <img src="https://ext.same-assets.com/3058181751/2697572383.png" alt="Client" class="client-logo">
-            <img src="https://ext.same-assets.com/3058181751/1594400275.png" alt="Client" class="client-logo">
-            <img src="https://ext.same-assets.com/3058181751/3053512543.png" alt="Client" class="client-logo">
-            <img src="https://ext.same-assets.com/3058181751/2373590880.png" alt="Client" class="client-logo">
-            <img src="https://ext.same-assets.com/3058181751/2132305153.png" alt="Client" class="client-logo">
-            <img src="https://ext.same-assets.com/3058181751/1836359847.png" alt="Client" class="client-logo">
-            <img src="https://ext.same-assets.com/3058181751/2384839414.png" alt="Client" class="client-logo">
-            <img src="https://ext.same-assets.com/3058181751/2038290571.png" alt="Client" class="client-logo">
-            <img src="https://ext.same-assets.com/3058181751/167799794.png" alt="Client" class="client-logo">
-            <img src="https://ext.same-assets.com/3058181751/3476143497.png" alt="Client" class="client-logo">
-            <img src="https://ext.same-assets.com/3058181751/563083638.png" alt="Client" class="client-logo">
+        <div class="clients-slider">
+            <div class="clients-track">
+                <img src="https://ext.same-assets.com/3058181751/427210201.png" alt="Audi" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/2615693972.png" alt="Changan" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/3037674938.png" alt="Geely" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/849165480.png" alt="FAW" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/916066270.png" alt="Sinopec" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/2697572383.png" alt="BAIC" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/1594400275.png" alt="Haval" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/3053512543.png" alt="Foton" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/2373590880.png" alt="Meizu" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/2132305153.png" alt="OPPO" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/1836359847.png" alt="Coocaa" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/2384839414.png" alt="Haier" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/2038290571.png" alt="Sanyuan" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/167799794.png" alt="Yili" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/3476143497.png" alt="Qiqihar" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/563083638.png" alt="Coolpad" class="client-logo">
+                <!-- 重复一遍实现无缝循环 -->
+                <img src="https://ext.same-assets.com/3058181751/427210201.png" alt="Audi" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/2615693972.png" alt="Changan" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/3037674938.png" alt="Geely" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/849165480.png" alt="FAW" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/916066270.png" alt="Sinopec" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/2697572383.png" alt="BAIC" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/1594400275.png" alt="Haval" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/3053512543.png" alt="Foton" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/2373590880.png" alt="Meizu" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/2132305153.png" alt="OPPO" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/1836359847.png" alt="Coocaa" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/2384839414.png" alt="Haier" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/2038290571.png" alt="Sanyuan" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/167799794.png" alt="Yili" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/3476143497.png" alt="Qiqihar" class="client-logo">
+                <img src="https://ext.same-assets.com/3058181751/563083638.png" alt="Coolpad" class="client-logo">
+            </div>
         </div>
     </section>
 
     <section class="timeline-section">
         <h2 class="section-title">成长历程</h2>
-        <p class="timeline-intro">27年风雨兼程，迪思是中国营销传播业发展的见证者和参与者，不断创新推动行业共同进步，我们求远在路上。</p>
+        <p class="timeline-intro">27年风雨兼程，悦动是中国营销传播业发展的见证者和参与者，不断创新推动行业共同进步，我们永远在路上。</p>
         
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-year">1996</div>
                 <div class="timeline-content">
-                    <h3>迪思在北京成立</h3>
-                    <img src="https://ext.same-assets.com/3058181751/3655284759.jpeg" alt="1996" style="width: 400px; margin-top: 20px;">
+                    <h3>悦动在北京成立</h3>
+                    <img src="https://ext.same-assets.com/3058181751/3655284759.jpeg" alt="1996">
                 </div>
             </div>
             
             <div class="timeline-item">
                 <div class="timeline-year">1997</div>
                 <div class="timeline-content">
-                    <h3>迪思定位</h3>
-                    <p style="font-size: 24px; color: #0a8fce; font-weight: bold;">YOUR ANOTHER MARKETING TEAM</p>
-                    <img src="https://ext.same-assets.com/3058181751/1458853501.png" alt="D&S Logo" style="width: 150px; margin-top: 20px;">
+                    <h3>悦动定位</h3>
+                    <p class="timeline-slogan">YOUR ANOTHER MARKETING TEAM</p>
+                    <img src="https://ext.same-assets.com/3058181751/1458853501.png" alt="D&S Logo" style="width: 150px;">
                 </div>
             </div>
             
             <div class="timeline-item">
                 <div class="timeline-year">1999</div>
                 <div class="timeline-content">
-                    <h3>上海/迪思互动广告成立</h3>
+                    <h3>上海/悦动互动广告成立</h3>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2000</div>
+                <div class="timeline-content">
+                    <h3>IT & INTERNET MARKETING PARTNER</h3>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2001</div>
+                <div class="timeline-content">
+                    <h3>EMPOWERING YOUR BRAND</h3>
                 </div>
             </div>
         </div>
     </section>
 
     <footer class="footer">
-        <p>北京朝阳高碑店东亿国际传媒产业园C7号楼 | 电话：010-85745399 | 邮编：100123</p>
-        <p>版 权码：300071</p>
-        <p>Copyright © All Rights Reserved. www.dsconsulting.com 京ICP备05035111号</p>
+        <p>浙江省杭州市莫干山路111号浙江广播电视集团 | 电话：0571-28120850 | 邮编：310005</p>
+        <p>版权码：300071</p>
+        <p>Copyright © All Rights Reserved. www.5535.net </p>
     </footer>
+
+    <script>
+        // 滚动时头部样式变化
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // 滚动显示动画
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        // 观察统计数据项
+        document.querySelectorAll('.stat-item').forEach(item => {
+            observer.observe(item);
+        });
+        
+        // 观察时间线项
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            observer.observe(item);
+        });
+        
+        // 观察标题
+        const title = document.querySelector('.section-title');
+        if (title) {
+            observer.observe(title);
+        }
+        
+        // 数字动画计数器
+        const counters = document.querySelectorAll('.counter');
+        const animateCounter = (counter) => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+            
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    counter.textContent = Math.floor(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target;
+                }
+            };
+            
+            updateCounter();
+        };
+        
+        // 统计数据观察器
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target.querySelector('.counter');
+                    const delay = parseInt(entry.target.getAttribute('data-delay'));
+                    
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                        animateCounter(counter);
+                    }, delay);
+                    
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        document.querySelectorAll('.stat-item').forEach(item => {
+            statsObserver.observe(item);
+        });
+    </script>
 </body>
 </html>
