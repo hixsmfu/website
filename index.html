@@ -15,688 +15,192 @@
 <p class="p1">&lt;!DOCTYPE html&gt;</p>
 <p class="p1">&lt;html lang="en"&gt;</p>
 <p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;5535 Media - Official Site&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>:root {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--primary: #d60036;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--primary-dark: #a10029;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--bg: #050814;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--bg-alt: #0b1020;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--text: #f5f5f5;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--muted: #a3acc4;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--card-bg: #111626;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--accent: #00c7ff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--radius-lg: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--radius-md: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--max-width: 1180px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>* {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-sizing: border-box;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",</p>
-<p class="p1"><span class="Apple-converted-space">        </span>sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: radial-gradient(circle at top, #182348 0, #050814 52%);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--text);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.6;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>a {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: inherit;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>img {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: block;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>header {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: sticky;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>top: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>z-index: 50;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>backdrop-filter: blur(18px);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(</p>
-<p class="p1"><span class="Apple-converted-space">        </span>to bottom,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>rgba(5, 8, 20, 0.95),</p>
-<p class="p1"><span class="Apple-converted-space">        </span>rgba(5, 8, 20, 0.85),</p>
-<p class="p1"><span class="Apple-converted-space">        </span>transparent</p>
-<p class="p1"><span class="Apple-converted-space">      </span>);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid rgba(255, 255, 255, 0.06);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: var(--max-width);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 14px 20px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.logo-wrap {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.logo-mark {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 32px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>height: 32px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: radial-gradient(circle at 30% 20%, #ffefef, #ff2657 42%, #650016 100%);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 800;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 0 18px rgba(255, 38, 87, 0.55);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.logo-text {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.08em;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.logo-sub {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 11px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.14em;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-links {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 22px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-links a {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding-bottom: 4px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-links a:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-links a::after {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>content: "";</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: absolute;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>left: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>bottom: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>height: 2px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(90deg, var(--primary), var(--accent));</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: width 0.2s ease-out;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-links a:hover::after {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-cta {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 8px 16px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 13px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(255, 255, 255, 0.18);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(9, 15, 36, 0.85);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--text);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: all 0.18s ease-out;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn-primary {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, var(--primary), var(--accent));</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 0 18px rgba(214, 0, 54, 0.6);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transform: translateY(-1px);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>opacity: 0.95;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hamburger {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 26px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>height: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hamburger span {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: block;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>height: 2px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>main {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: var(--max-width);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 18px 20px 40px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Hero */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.3fr);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 26px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 42px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-tag {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: inline-flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 4px 10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(9, 18, 48, 0.9);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(255, 255, 255, 0.08);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 11px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.12em;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-tag-dot {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>height: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #09ff8c;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 0 12px rgba(9, 255, 140, 0.7);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-title {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: clamp(30px, 4vw, 38px);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 800;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.03em;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-title span {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(120deg, #ff4b7a, #ffc76b);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>-webkit-background-clip: text;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: transparent;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-subtitle {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 420px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-meta {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.pill {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 4px 10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(255, 255, 255, 0.16);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(9, 13, 30, 0.9);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-actions {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-media {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>overflow: hidden;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: radial-gradient(circle at top left, #ff7d7d, #12162a 48%);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>min-height: 230px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-media img {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>height: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>object-fit: cover;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>opacity: 0.94;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-media-overlay {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: absolute;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>inset: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(</p>
-<p class="p1"><span class="Apple-converted-space">        </span>to top right,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>rgba(5, 8, 20, 0.75),</p>
-<p class="p1"><span class="Apple-converted-space">        </span>transparent 55%</p>
-<p class="p1"><span class="Apple-converted-space">      </span>);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-badge {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: absolute;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>left: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>bottom: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(9, 13, 30, 0.92);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(255, 255, 255, 0.14);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 11px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 220px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-badge-title {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 2px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-badge-meta {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Sections */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>section {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 36px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.section-header {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: baseline;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.section-title {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.section-sub {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Brand / channels */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.brand-grid {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: repeat(4, minmax(0, 1fr));</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.brand-card {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-md);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: radial-gradient(circle at top, #272c4b, #101425);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(255, 255, 255, 0.06);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 12px 12px 10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>min-height: 100px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.brand-logo {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.brand-tag {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 11px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Content cards */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.content-grid {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: repeat(3, minmax(0, 1fr));</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.content-card {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-md);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: var(--card-bg);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(255, 255, 255, 0.06);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>overflow: hidden;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>min-height: 230px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.content-thumb {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>overflow: hidden;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-height: 140px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.content-thumb img {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>height: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>object-fit: cover;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transform: scale(1.03);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: transform 0.2s ease-out;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.content-card:hover .content-thumb img {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transform: scale(1.08);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.content-body {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px 12px 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex: 1;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.content-tag {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 11px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.12em;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.content-title {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.content-meta {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 11px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: auto;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* News / stories */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.news-list {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.news-main {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-md);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: var(--card-bg);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(255, 255, 255, 0.06);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 14px 14px 16px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.news-main-title {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.news-main-text {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 13px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.news-main-foot {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 11px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.news-side {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.news-item {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(255, 255, 255, 0.06);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 8px 10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(9, 13, 30, 0.9);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.news-item-title {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 2px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.news-item-meta {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 11px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>footer {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-top: 1px solid rgba(255, 255, 255, 0.1);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #050712;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.footer-inner {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: var(--max-width);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 18px 20px 26px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 11px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.footer-links {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Responsive */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 920px) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.hero {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: minmax(0, 1fr);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.brand-grid {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: repeat(2, minmax(0, 1fr));</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.content-grid {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: repeat(2, minmax(0, 1fr));</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.news-list {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: minmax(0, 1fr);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 640px) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.nav-links,</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.nav-cta {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>display: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.hamburger {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>main {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>padding-inline: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.brand-grid {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: minmax(0, 1fr);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.content-grid {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: minmax(0, 1fr);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.hero {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>margin-top: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;title&gt;5535 Media – Official Site&lt;/title&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1">body {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family: Arial, Helvetica, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: #0b0f19;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: #ffffff;</p>
+<p class="p1">}</p>
+<p class="p1">header {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: #111726;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 15px 25px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position: sticky;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>top: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>z-index: 10;</p>
+<p class="p1">}</p>
+<p class="p1">.nav a {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: #d0d5e1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-left: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 14px;</p>
+<p class="p1">}</p>
+<p class="p1">.nav a:hover {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: #ffffff;</p>
+<p class="p1">}</p>
+<p class="p1">.logo {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing: 1px;</p>
+<p class="p1">}</p>
+<p class="p1">.hero {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 40px 25px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 30px;</p>
+<p class="p1">}</p>
+<p class="p1">.hero-text {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex: 1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>min-width: 280px;</p>
+<p class="p1">}</p>
+<p class="p1">.hero-text h1 {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 32px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 12px;</p>
+<p class="p1">}</p>
+<p class="p1">.hero-text p {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: #c7ccd8;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width: 400px;</p>
+<p class="p1">}</p>
+<p class="p1">.hero-img {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex: 1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>min-width: 300px;</p>
+<p class="p1">}</p>
+<p class="p1">.hero-img img {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: block;</p>
+<p class="p1">}</p>
+<p class="p1">.section {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 35px 25px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width: 1200px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 0 auto;</p>
+<p class="p1">}</p>
+<p class="p1">.section h2 {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 22px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 15px;</p>
+<p class="p1">}</p>
+<p class="p1">.grid-3 {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 18px;</p>
+<p class="p1">}</p>
+<p class="p1">.card {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: #141b2d;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding-bottom: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>overflow: hidden;</p>
+<p class="p1">}</p>
+<p class="p1">.card img {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 150px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>object-fit: cover;</p>
+<p class="p1">}</p>
+<p class="p1">.card-title {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: bold;</p>
+<p class="p1">}</p>
+<p class="p1">.card-text {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 0 12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 13px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: #c0c5d4;</p>
+<p class="p1">}</p>
+<p class="p1">footer {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 40px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: #111623;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: #a7b0c4;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 12px;</p>
+<p class="p1">}</p>
+<p class="p1">&lt;/style&gt;</p>
 <p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
 <p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
 <p class="p1">&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="nav"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="logo-wrap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="logo-mark"&gt;55&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="logo-text"&gt;5535 MEDIA&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="logo-sub"&gt;STORIES · STREAMING · BRANDS&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="logo"&gt;5535 MEDIA&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#brands"&gt;Brands&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#shows"&gt;Shows&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#news"&gt;News&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#about"&gt;About&lt;/a&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;nav class="nav-links"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#brands"&gt;Brands&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#shows"&gt;Shows&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#news"&gt;Newsroom&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#about"&gt;About&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-cta"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn"&gt;Media Kit&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn btn-primary"&gt;Contact Sales&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hamburger" aria-label="Toggle navigation"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
 <p class="p1">&lt;/header&gt;</p>
 <p class="p2"><br></p>
-<p class="p1">&lt;main&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Hero --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section class="hero"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="hero-tag"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="hero-tag-dot"&gt;&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;New for 2025&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h1 class="hero-title"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>5535 Media connects &lt;span&gt;stories, brands and audiences&lt;/span&gt; across Canada.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="hero-subtitle"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>A digital-first media group based in Canada, delivering premium video, audio and live experiences</p>
-<p class="p1"><span class="Apple-converted-space">        </span>that reach audiences wherever they are.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="hero-meta"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="pill"&gt;National reach&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="pill"&gt;Streaming · TV · Audio · Digital&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="hero-actions"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="btn btn-primary"&gt;Explore our brands&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="btn"&gt;View advertising solutions&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1">&lt;section class="hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hero-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Connecting Stories, Brands &amp; Audiences&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;5535 Media is a digital-first Canadian media group delivering news, entertainment and audio content across multiple platforms.&lt;/p&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hero-media"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- 示例图片：可直接访问的 Unsplash 链接，你可换成自己的 --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;img src="https://images.pexels.com/photos/6898859/pexels-photo-6898859.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"</p>
-<p class="p1"><span class="Apple-converted-space">           </span>alt="Studio lights and people working in media" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="hero-media-overlay"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="hero-badge"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="hero-badge-title"&gt;Live from Ottawa · Original programming&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="hero-badge-meta"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>Multi-platform content for news, entertainment, sports and culture.</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Brands / channels --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="brands"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-header"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="section-title"&gt;Our Brands&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="section-sub"&gt;Multi-platform media properties for every audience.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hero-img"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="https://images.pexels.com/photos/6898859/pexels-photo-6898859.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt=""&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="brand-grid"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="brand-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="brand-logo"&gt;5535 News&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="brand-tag"&gt;National and local news, live from Canadian cities.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="brand-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="brand-logo"&gt;5535 Play&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="brand-tag"&gt;Entertainment, drama and reality formats on every screen.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="brand-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="brand-logo"&gt;5535 Audio&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="brand-tag"&gt;Talk, music and podcasts across web, app and smart speakers.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="brand-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="brand-logo"&gt;5535 Studios&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="brand-tag"&gt;Original productions, branded content and creative services.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Shows / content --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="shows"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-header"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="section-title"&gt;Featured Shows &amp; Series&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="section-sub"&gt;Signature programming from our networks and partners.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="content-grid"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;article class="content-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="content-thumb"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;img src="https://images.pexels.com/photos/6898851/pexels-photo-6898851.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"</p>
-<p class="p1"><span class="Apple-converted-space">               </span>alt="News studio" /&gt;</p>
+<p class="p1">&lt;section class="section" id="brands"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Our Brands&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="grid-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src="https://images.pexels.com/photos/6898851/pexels-photo-6898851.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt=""&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-title"&gt;5535 News&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-text"&gt;Local and national news serving Canadian communities.&lt;/div&gt;</p>
 <p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="content-body"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="content-tag"&gt;News&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="content-title"&gt;5535 Evening Report&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="content-meta"&gt;Weeknights · Live from our national studio&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/article&gt;</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;article class="content-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="content-thumb"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;img src="https://images.pexels.com/photos/6898850/pexels-photo-6898850.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"</p>
-<p class="p1"><span class="Apple-converted-space">               </span>alt="Streaming content" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src="https://images.pexels.com/photos/6898850/pexels-photo-6898850.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt=""&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-title"&gt;5535 Play&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-text"&gt;Streaming entertainment, original series and lifestyle content.&lt;/div&gt;</p>
 <p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="content-body"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="content-tag"&gt;Streaming&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="content-title"&gt;5535 Play Originals&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="content-meta"&gt;Exclusive series available on our digital platforms&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/article&gt;</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;article class="content-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="content-thumb"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;img src="https://images.pexels.com/photos/6898857/pexels-photo-6898857.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"</p>
-<p class="p1"><span class="Apple-converted-space">               </span>alt="Podcast recording" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src="https://images.pexels.com/photos/6898857/pexels-photo-6898857.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt=""&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-title"&gt;5535 Audio&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-text"&gt;Podcasts, talk shows and daily audio programming.&lt;/div&gt;</p>
 <p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="content-body"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="content-tag"&gt;Audio&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="content-title"&gt;5535 Daily Podcast&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="content-meta"&gt;Daily insights into news, culture and business&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/article&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- News / newsroom --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="news"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-header"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="section-title"&gt;Newsroom Highlights&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="section-sub"&gt;Latest updates from 5535 Media.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="news-list"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="news-main"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="news-main-title"&gt;5535 Media announces expansion of digital streaming footprint&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="news-main-text"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>5535 Media is accelerating its digital-first strategy with new streaming partnerships,</p>
-<p class="p1"><span class="Apple-converted-space">          </span>enhanced OTT distribution and additional local content hubs serving audiences across Canada.</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="news-main-foot"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Corporate · Press release&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Ottawa · 2025&lt;/span&gt;</p>
+<p class="p1">&lt;section class="section" id="news"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Latest News&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="grid-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src="https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt=""&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-title"&gt;Digital Expansion&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-text"&gt;5535 Media expands streaming partnerships across Canada.&lt;/div&gt;</p>
 <p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="news-side"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="news-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="news-item-title"&gt;New original series slate unveiled for 5535 Play&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="news-item-meta"&gt;Entertainment · Programming&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="news-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="news-item-title"&gt;5535 Audio launches cross-country morning lineup&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="news-item-meta"&gt;Audio · Radio &amp; podcast&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="news-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="news-item-title"&gt;Advertising partners gain new data-driven tools&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="news-item-meta"&gt;Ad solutions · Data &amp; insight&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- About / CTA --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="about"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-header"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="section-title"&gt;About 5535 Media&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="section-sub"&gt;Built in Canada, for Canadian audiences and brands.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src="https://images.pexels.com/photos/11813169/pexels-photo-11813169.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt=""&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-title"&gt;New Originals&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-text"&gt;A new lineup of original programs announced for 2025.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src="https://images.pexels.com/photos/6476588/pexels-photo-6476588.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt=""&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-title"&gt;Audio Launch&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-text"&gt;National morning audio network expansion begins this year.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="news-main"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="news-main-text"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>5535 Media is an independent Canadian media group connecting people and stories across platforms.</p>
-<p class="p1"><span class="Apple-converted-space">        </span>From live news and entertainment to audio and digital experiences, we help audiences discover what</p>
-<p class="p1"><span class="Apple-converted-space">        </span>matters and help brands show up in meaningful ways.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="news-main-foot"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;Want to work with us?&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;&lt;a href="#contact"&gt;Contact our team &amp;rsaquo;&lt;/a&gt;&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p1">&lt;/main&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;section class="section" id="about"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;About Us&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;5535 Media is a Canadian media network connecting people through news, entertainment and audio storytelling. We create meaningful content for modern audiences across every platform.&lt;/p&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
 <p class="p2"><br></p>
 <p class="p1">&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="footer-inner"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;© 2025 5535 Media. All rights reserved.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer-links"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#"&gt;Legal&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#"&gt;Privacy&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#"&gt;Ad choices&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#"&gt;Contact&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>© 2025 5535 Media — All rights reserved.</p>
 <p class="p1">&lt;/footer&gt;</p>
+<p class="p2"><br></p>
 <p class="p1">&lt;/body&gt;</p>
 <p class="p1">&lt;/html&gt;</p>
 </body>
